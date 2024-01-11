@@ -18,4 +18,3 @@ public class Turret : MonoBehaviour
         transform.Rotate(direction * speed * Time.deltaTime, 0, 0);
     }
 }
-
