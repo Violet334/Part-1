@@ -226,6 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5022722705842966398}
+  - component: {fileID: 2976799380928945484}
   m_Layer: 0
   m_Name: Turret Rotation Point
   m_TagString: Untagged
@@ -242,13 +243,25 @@ Transform:
   m_GameObject: {fileID: 6915351586298069550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 0.44, z: -0.027543878}
+  m_LocalPosition: {x: -0.755, y: 0.465, z: -0.027543878}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3739635415000696677}
   m_Father: {fileID: 8316397868124661474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2976799380928945484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915351586298069550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fe4ef7e27aeca4cbcbe7f7e1481adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7095322793015501422
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3739635415000696677}
   - component: {fileID: 7749942675326805056}
-  - component: {fileID: 9066453920560799357}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -276,7 +288,7 @@ Transform:
   m_GameObject: {fileID: 7095322793015501422}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.7700001, y: 0.09, z: -0.039336704}
+  m_LocalPosition: {x: 1.1850001, y: 0.014999986, z: -0.039336704}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -335,18 +347,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9066453920560799357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095322793015501422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71fe4ef7e27aeca4cbcbe7f7e1481adb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8857289524139695709
 GameObject:
   m_ObjectHideFlags: 0

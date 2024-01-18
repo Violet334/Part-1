@@ -15,6 +15,6 @@ public class Turret : MonoBehaviour
     void Update()
     {
         float direction = Input.GetAxis("Vertical");
-        transform.Rotate(direction * speed * Time.deltaTime, 0, 0);
+        transform.Rotate(0, 0, direction * speed * Time.deltaTime);
     }
 }
