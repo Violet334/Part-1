@@ -9,6 +9,7 @@ public class Car : MonoBehaviour
     float steering;
     public float forwardSpeed = 500;
     public float steeringSpeed = 100;
+    public float speedBoost = 2;
     Rigidbody2D rigidbody;
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,12 @@ public class Car : MonoBehaviour
         rigidbody.AddTorque(steering * -steeringSpeed * Time.deltaTime);
         Vector2 force = transform.up * acceleration * forwardSpeed * Time.deltaTime;
         rigidbody.AddForce(force);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        rigidbody.AddTorque(steering * -steeringSpeed * Time.deltaTime);
+        Vector2 boost = transform.up * acceleration * forwardSpeed * Time.deltaTime * speedBoost;
+        rigidbody.AddForce(boost);
     }
 }
