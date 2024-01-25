@@ -8,7 +8,7 @@ public class Car : MonoBehaviour
     float acceleration;
     float steering;
     public float forwardSpeed = 500;
-    public float steeringSpeed = 200;
+    public float steeringSpeed = 100;
     Rigidbody2D rigidbody;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Car : MonoBehaviour
     void Update()
     {
         acceleration = Input.GetAxis("Vertical");
-        steering = Input.GetAxis("Horixontal");
+        steering = Input.GetAxis("Horizontal");
     }
 
     private void FixedUpdate()
