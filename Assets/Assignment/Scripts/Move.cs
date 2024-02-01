@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speed = 5;
-    Rigidbody2D rigidbody;
-
+    public float speed = 3;
+    float bounds = 6;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(0, speed * Time.deltaTime, 0);
+        if(transform.position.y > bounds)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
+    
 }
