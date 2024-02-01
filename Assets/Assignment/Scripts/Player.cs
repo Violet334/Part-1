@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     float move;
     public float moveSpeed = 50;
     public float acceleration = 1.5f;
+    public GameObject trigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,14 +21,12 @@ public class Player : MonoBehaviour
         transform.Translate(move * moveSpeed * Time.deltaTime, 0, 0);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        transform.position = new Vector3(0, 0);
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         transform.Translate(move * moveSpeed * acceleration * Time.deltaTime, 0, 0);
+        Destroy(trigger);
+
     }
 
 }
