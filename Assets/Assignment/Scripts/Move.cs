@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour
+    //Movement script for platforms and speed boosting plates
 {
     public float speed = 3;
     float bounds = 6;
@@ -16,6 +17,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         transform.Translate(0, speed * Time.deltaTime, 0);
+        //collision event does not seem to work, thus ensuring the objects will be destroyed
         if(transform.position.y > bounds)
         {
             Destroy(gameObject);
